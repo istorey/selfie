@@ -1,6 +1,6 @@
-class SelfieController < ApplicationController
+class SelfiesController < ApplicationController
   def index
-
+      @selfie = Selfie.all
   end
 
   def show
@@ -24,6 +24,6 @@ class SelfieController < ApplicationController
   end
 
   def destroy
-    
+
   end
 end
