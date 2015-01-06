@@ -1,2 +1,11 @@
-<h1>Selfie#new</h1>
-<p>Find me in app/views/selfie/new.html.erb</p>
+<% if @selfie.errors.any? %>
+	<%= @selfie.errors.full_messages %>
+<% end %>
+
+<h2>New Selfie</h2>
+<%= form_for @selfie do |f| %>
+	<%=	f.text_field :body %>
+	<%= f.submit %>
+<% end %>
+
+<a href="/">Home</a>

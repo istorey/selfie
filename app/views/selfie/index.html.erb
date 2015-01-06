@@ -1,2 +1,9 @@
-<h1>Selfie#index</h1>
-<p>Find me in app/views/selfie/index.html.erb</p>
+<h1>Selfie</h1>
+
+<ul>
+	<% @selfies.each do |s| %>
+	<li><%= s.body %> <%= link_to 'delete', selfy_path(selfie), method: 'delete' %> </li>
+	<% end %>
+</ul>
+
+<a href="/selfies/new">Create a Selfie</a>
